@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Epik</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="plugins/images/favicon.png">
+    <link href="plugins/bower_components/chartist/dist/chartist.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="css/style.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="preloader">
+        <div class="lds-ripple">
+            <div class="lds-pos"></div>
+            <div class="lds-pos"></div>
+        </div>
+    </div>
+    <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
+        data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
+        <header class="topbar" data-navbarbg="skin5">
+            <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+                <div class="navbar-header" data-logobg="skin6">
+                    <a class="navbar-brand" href="dashboard.html">
+                        <b class="logo-icon">
+                        </b>
+                        <span class="logo-text">
+                            <img src="plugins/images/logo.png" alt="homepage" width="80%" height="40%" style="margin-top: 1rem;margin-left: 1rem;margin-bottom: 1rem" />
+                        </span>
+                    </a>
+                    <a class="nav-toggler waves-effect waves-light text-dark d-block d-md-none"
+                        href="javascript:void(0)"><i class="ti-menu ti-close"></i></a>
+                </div>
+                <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
+                    <ul class="navbar-nav ms-auto d-flex align-items-center">
+                        <li class=" in">
+                            <form role="search" class="app-search d-none d-md-block me-3">
+                                <input type="text" placeholder="Search..." class="form-control mt-0">
+                                <a href="" class="active">
+                                    <i class="fa fa-search"></i>
+                                </a>
+                            </form>
+                        </li>
+                        <li>
+                            <a class="profile-pic" href="profile.html">
+                                <img src="plugins/images/large/img2.jpg" alt="user-img" width="40" height="40" 
+                                    class="img-circle"><span class="text-white font-medium">Esakki</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <aside class="left-sidebar" data-sidebarbg="skin6">
+            <div class="scroll-sidebar">
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                         <li class="sidebar-item pt-2">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="dashboard.html"
+                                aria-expanded="false">
+                                <i class="far fa-clock" aria-hidden="true"></i>
+                                <span class="hide-menu">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="profile.html"
+                                aria-expanded="false">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <span class="hide-menu">Profile</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="dashboard.html"
+                                aria-expanded="false">
+                                <i class="fa fa-table" aria-hidden="true"></i>
+                                <span class="hide-menu">Epik</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="dashboard.html"
+                                aria-expanded="false">
+                                <i class="fa fa-font" aria-hidden="true"></i>
+                                <span class="hide-menu">Feedback</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                </nav>
+            </div>
+
+        </aside>
+        <div class="page-wrapper">
+            <div class="page-breadcrumb bg-white" style="margin-top: 1rem ">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                        <h4 class="page-title">Dashboard</h4>
+                    </div>
+                    <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+                        <div class="d-md-flex">
+                            <ol class="breadcrumb ms-auto"></a></li>
+                            </ol>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Check in
+                            </button>
+                            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h3 class="modal-title" id="exampleModalLongTitle">Vehicle Check in</h3>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                    <div class="modal-body">
+                                    <form>
+                                       <div class="row">
+                                          <div class="col">
+                                           <label for="inputtext"><b>Vehicle Number</b></label>
+                                             <input type="text" class="form-control" placeholder="Vehicle Number" required="">
+                                          </div>
+                                        <div class="col">
+                                            <label for="inputtext"><b>Vehicle Type</b></label>
+                                          <input type="text" class="form-control" placeholder="Vehicle Type" required="">
+                                        </div>
+                                       </div>
+                                       <div class="row" style="margin-top: 1rem">
+                                          <div class="col">
+                                           <label for="inputtext"><b>Vehicle Modal</b></label>
+                                             <input type="text" class="form-control" placeholder="Vehicle Modal" required="">
+                                          </div>
+                                        <div class="col">
+                                            <label for="inputnumber"><b>Phone Number</b></label>
+                                          <input type="text" class="form-control" placeholder="Phone Number" required="">
+                                        </div>
+                                       </div>
+                                       <div class="row" style="margin-top: 1rem">
+                                          <div class="col">
+                                           <label for="inputname"><b>Name</b></label>
+                                             <input type="text" class="form-control" placeholder="name" required="">
+                                          </div>
+                                       </div>
+                                    </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Register</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="row">
+                    <div class="col-md-12 col-lg-12 col-sm-12">
+                        <div class="white-box">
+                            <div class="d-md-flex mb-3">
+                                <h2 class="box-title mb-0">VALET PARKING</h2>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table no-wrap">
+                                    <thead>
+                                        <tr>
+                                            <th class="border-top-0">S.no</th>
+                                            <th class="border-top-0">Vehicle Number</th>
+                                            <th class="border-top-0">Vehicle Modal</th>
+                                            <th class="border-top-0">Phone number</th>
+                                            <th class="border-top-0">Check in</th>
+                                            <th class="border-top-0">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td class="txt-oflo">TN 09 CD 2721</td>
+                                            <td>AUDI A6</td>
+                                            <td class="txt-oflo">9487870912</td>
+                                            <td><span>04-08-2021 6:00AM</span></td>
+                                            <td><button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#exampleModalCenter1">Check out</button></td>
+                                            <div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h3 class="modal-title" id="exampleModalLongTitle">Vehicle Check in</h3>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                    <div class="modal-body">
+                                    <form>
+                                       <div class="row">
+                                          <div class="col">
+                                           <label for="inputtext"><b>Vehicle Number</b></label>
+                                             <h6>TN 09 CD 2721</h6>
+                                          </div>
+                                          <div class="col">
+                                           <label for="inputtext"><b>Vehicle Modal</b></label>
+                                             <h6>AUDI A6</h6>
+                                          </div>
+                                       </div>
+                                       <div class="row" style="margin-top: 1rem">
+                                            <div class="col">
+                                           <label for="inputtext"><b>Phone Number</b></label>
+                                              <h6>9487870912</h6>
+                                          </div>
+                                          <div class="col">
+                                           <label for="inputtext"><b>Check in</b></label>
+                                             <h6>04-08-2021 6:00AM</h6>
+                                          </div>
+                                       </div>
+                                       <div class="row" style="margin-top: 1rem">
+                                            <div class="col">
+                                           <label for="inputtext"><b>Check out</b></label>
+                                             <h6>04-08-2021 6:00AM</h6>
+                                          </div>
+                                       </div>
+                                    </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary">Proceed to pay</button>
+                                    </div>
+                                </div>
+                            </div>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td class="txt-oflo">TN 09 CD 2721</td>
+                                            <td>AUDI A6</td>
+                                            <td class="txt-oflo">9487870912</td>
+                                            <td><span>04-08-2021 6:00AM</span></td>
+                                            <td><button type="button" class="btn btn-outline-dark">Check out</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td class="txt-oflo">TN 09 CD 2721</td>
+                                            <td>AUDI A6</td>
+                                            <td class="txt-oflo">9487870912</td>
+                                            <td><span>04-08-2021 6:00AM</span></td>
+                                            <td><button type="button" class="btn btn-outline-dark">Check out</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td class="txt-oflo">TN 09 CD 2721</td>
+                                            <td>AUDI A6</td>
+                                            <td class="txt-oflo">9487870912</td>
+                                            <td><span>04-08-2021 6:00AM</span></td>
+                                            <td><button type="button" class="btn btn-outline-dark">Check out</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td class="txt-oflo">TN 09 CD 2721</td>
+                                            <td>AUDI A6</td>
+                                            <td class="txt-oflo">9487870912</td>
+                                            <td><span>04-08-2021 6:00AM</span></td>
+                                            <td><button type="button" class="btn btn-outline-dark">Check out</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td class="txt-oflo">TN 09 CD 2721</td>
+                                            <td>AUDI A6</td>
+                                            <td class="txt-oflo">9487870912</td>
+                                            <td><span>04-08-2021 6:00AM</span></td>
+                                            <td><button type="button" class="btn btn-outline-dark">Check out</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td class="txt-oflo">TN 09 CD 2721</td>
+                                            <td>AUDI A6</td>
+                                            <td class="txt-oflo">9487870912</td>
+                                            <td><span>04-08-2021 6:00AM</span></td>
+                                            <td><button type="button" class="btn btn-outline-dark">Check out</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="plugins/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="js/sidebarmenu.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
